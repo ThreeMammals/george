@@ -1,0 +1,22 @@
+# Directories
+# ===========
+.*code
+.idea
+.terraform
+node_modules
+artifacts
+coverage
+.vscode
+
+# Files
+# =====
+*.todo
+*.history
+yarn.lock
+package-lock.json
+*.log
+*.tgz
+*.DS_Store
+.npmrc
+*.pem
+

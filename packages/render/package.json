@@ -1,0 +1,72 @@
+{
+  "name": "@george/render",
+  "version": "1.0.48",
+  "description": "TODO:",
+  "author": "Tom Gardham-Pallister <tom@threemammals.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "src/main.js",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "jest --coverage --verbose --detectOpenHandles",
+    "start": "react-static start",
+    "full-build": "react-static build",
+    "incremental-build": "react-static export --incremental",
+    "stage": "react-static build --staging",
+    "build": "./node_modules/@george/scripts/setup-npmrc.sh && docker build -t george/render . && ./node_modules/@george/scripts/teardown-npmrc.sh",
+    "build-ci": "npm run build",
+    "analyze": "react-static build --analyze",
+    "serve": "serve dist -p 3000",
+    "docker-run": "docker run -it -v /Users/TGP/dev/george/packages/ingest/events:/usr/src/app/events/ threemammals/george-render /bin/bash",
+    "publish": "./node_modules/@george/scripts/publish.sh"
+  },
+  "dependencies": {
+    "@george/components": "^1.0.17",
+    "@george/scripts": "^1.0.10",
+    "@reach/router": "^1.2.1",
+    "amqplib": "^0.5.3",
+    "apollo-cache-inmemory": "^1.6.2",
+    "apollo-client": "^2.6.3",
+    "apollo-link-http": "^1.5.15",
+    "fast-copy": "^2.0.3",
+    "fs-extra": "^8.0.1",
+    "graphql": "^14.4.2",
+    "graphql-tag": "^2.10.1",
+    "node-fetch": "^2.6.0",
+    "pretty-data": "^0.40.0",
+    "react": "^16.8.2",
+    "react-apollo": "^2.5.8",
+    "react-dom": "^16.8.2",
+    "react-hot-loader": "^4.12.6",
+    "react-static": "^7.0.1",
+    "react-static-plugin-reach-router": "^7.0.10",
+    "react-static-plugin-sitemap": "^7.0.10",
+    "react-static-plugin-source-filesystem": "^7.1.0",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "9.x",
+    "babel-loader": "^8.0.6",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-react-app": "^3.0.8",
+    "eslint-config-react-tools": "1.x.x",
+    "eslint-plugin-flowtype": "2.x",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.8.0",
+    "serve": "10.1.2"
+  }
+}

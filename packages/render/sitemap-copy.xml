@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://localhost/about/</loc>
+    </url>
+    <url>
+        <loc>https://localhost/blog/</loc>
+    </url>
+    <url>
+        <loc>https://localhost/</loc>
+    </url>
+    <url>
+        <loc>https://localhost/ocelot/</loc>
+    </url>
+    <url>
+        <loc>https://localhost/pushy/</loc>
+    </url>
+    <url>
+        <loc>https://localhost/blog/post/27/</loc>
+    </url>
+</urlset>

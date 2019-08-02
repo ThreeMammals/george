@@ -1,0 +1,12 @@
+{
+  "name": "@george/scripts",
+  "version": "1.0.10",
+  "description": "TODO:",
+  "main": "index.js",
+  "scripts": {
+    "build-ci": "./setup-npmrc.sh && npm publish && ./teardown-npmrc.sh",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,140 @@
+version: '3.3'
+
+services:
+   mysql:
+     image: mysql:5.7
+     volumes:
+       - mysql_data:/var/lib/mysql
+     ports:
+       - "3306:3306"
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: somewordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+   wordpress:
+     depends_on:
+       - mysql
+       - rabbit
+     image: george/wordpress
+     volumes:
+       - wordpress_data:/var/www/html
+      #  allows image upload via container for some reason cannot write to normal volume need to work out
+       - ./packages/wordpress/src/wp-content/uploads:/var/www/html/wp-content/uploads
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: mysql:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+       WORDPRESS_DEBUG: 1
+   rabbit:
+     image: "rabbitmq:3-management"
+     hostname: "rabbitmq"
+     environment:
+       RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+        # RABBITMQ_DEFAULT_USER: "rabbitmq"
+        # RABBITMQ_DEFAULT_PASS: "rabbitmq"
+        # RABBITMQ_DEFAULT_VHOST: "/"
+     ports:
+       - "15672:15672"
+       - "5672:5672"
+     labels:
+       NAME: "rabbitmq"
+     volumes:
+       - rabbit_data:/var/lib/rabbitmq
+   postgres:
+     image: postgres:latest
+     volumes:
+       - postgres_data:/var/lib/postgresql/data
+     ports:
+       - "5432:5432"
+     restart: always
+     environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_USER: george
+   data:
+    depends_on:
+       - postgres
+    image: george/data
+    restart: "no"
+    environment:
+      GEORGE_POSTGRES_PASSWORD: example
+      GEORGE_POSTGRES_USER: george
+      GEORGE_POSTGRES_HOST: postgres
+    volumes:
+    - type: bind
+      source: /var/run/docker.sock
+      target: /var/run/docker.sock
+    - type: bind
+      source: /usr/local/bin/docker
+      target: /usr/local/bin/docker
+   adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+   ingest:
+    depends_on:
+       - postgres
+    image: george/ingest
+    volumes:
+      - render_wp_images:/usr/src/app/wp-content/
+    restart: always
+    environment:
+     WORDPRESS_SITE_ROOT: https://localhost/
+     GEORGE_SITE_ROOT: https://localhost/
+     GEORGE_DATABASE_HOST: postgres
+     GEORGE_RABBITMQ_URL: amqp://rabbit
+     NODE_TLS_REJECT_UNAUTHORIZED: 0
+     INTERNAL_SITE_ROOL: https://serve/
+   api:
+    depends_on:
+       - postgres
+    image: george/api
+    restart: always
+    environment:
+     GEORGE_DATABASE_HOST: postgres
+    ports:
+      - 4000:4000
+   render:
+    depends_on:
+       - api
+    image: george/render
+    restart: always
+    environment:
+     GEORGE_API_URL: http://api:4000/
+     GEORGE_RABBITMQ_URL: amqp://rabbit
+     GEORGE_SITE_ROOT: https://localhost/
+     GEORGE_PUBLIC_API_URL: https://localhost/api
+    volumes:
+       - render_static_content:/usr/src/app/website/
+   serve:
+    depends_on:
+       - render
+    image: george/serve
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      FQDN_OR_IP: localhost
+    volumes:
+       - render_static_content:/usr/share/nginx/html
+       - render_wp_images:/usr/share/nginx/html/wp-content/
+       - wordpress_data:/var/www/html
+      #  this is the images uploaded to wordpress that are saved locally
+       - ./packages/wordpress/src/wp-content/uploads:/var/www/html/wp-content/uploads
+       - ./packages/serve/certs:/etc/letsencrypt
+       - ./packages/serve/certs-data:/data/letsencrypt
+      #  comment this back in if you want the logs locally
+      #  - ./packages/serve/logs:/var/log/nginx
+      #  comment this back in if you want to debug
+    # command: [nginx-debug, '-g', 'daemon off;']
+volumes:
+    mysql_data:
+    postgres_data:
+    rabbit_data:
+    wordpress_data:
+    render_wp_images:
+    render_static_content:

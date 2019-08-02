@@ -1,0 +1,28 @@
+{
+  "name": "@george/wordpress",
+  "version": "1.0.18",
+  "description": "TODO:",
+  "author": "Tom Gardham-Pallister <tom@threemammals.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "src/wordpress.js",
+  "dependencies": {
+    "@george/scripts": "^1.0.10"
+  },
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 0",
+    "install-pushy": "./scripts/install-pushy.sh",
+    "upgrade-pushy": "./scripts/upgrade-pushy.sh",
+    "uninstall-pushy": "./scripts/uninstall-pushy.sh",
+    "build": "./node_modules/@george/scripts/setup-npmrc.sh && docker build -t george/wordpress . && ./node_modules/@george/scripts/teardown-npmrc.sh",
+    "build-ci": "npm run build",
+    "publish": "./node_modules/@george/scripts/publish.sh"
+  }
+}

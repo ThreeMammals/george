@@ -1,0 +1,25 @@
+{
+  "name": "@george/serve",
+  "version": "1.0.24",
+  "description": "TODO:",
+  "author": "Tom Gardham-Pallister <tom@threemammals.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "src/wordpress.js",
+  "dependencies": {
+    "@george/scripts": "^1.0.10"
+  },
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 0",
+    "build": "./node_modules/@george/scripts/setup-npmrc.sh && docker build -t george/serve . && ./node_modules/@george/scripts/teardown-npmrc.sh",
+    "build-ci": "npm run build",
+    "publish": "./node_modules/@george/scripts/publish.sh"
+  }
+}

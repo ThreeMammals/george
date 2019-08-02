@@ -1,0 +1,26 @@
+{
+    "name": "george/wordpress",
+    "authors": [
+      {
+        "name": "Tom Pallister",
+        "email": "tom@threemammals.com"
+      }
+    ],
+    "repositories": [
+      {
+        "type": "vcs",
+        "url": "git@github.com:ThreeMammals/pushy.git"
+      }
+    ],
+    "extra": {
+      "installer-paths": {
+        "src/wp-content/plugins/{$name}/": [
+          "type:wordpress-plugin"
+        ]
+      }
+    },
+    "minimum-stability": "dev",
+    "require": {
+      "three-mammals/pushy": "0.0.12"
+    }
+  }

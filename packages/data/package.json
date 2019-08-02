@@ -1,0 +1,29 @@
+{
+  "name": "@george/data",
+  "version": "1.0.17",
+  "description": "TODO:",
+  "author": "Tom Gardham-Pallister <tom@threemammals.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "src/data.js",
+  "devDependencies": {
+    "@george/scripts": "^1.0.10"
+  },
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "./node_modules/@george/scripts/setup-npmrc.sh && docker build -t george/data . && ./node_modules/@george/scripts/teardown-npmrc.sh",
+    "build-ci": "npm run build",
+    "publish": "./node_modules/@george/scripts/publish.sh",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "migrate-up": "docker run -v /Users/TGP/dev/george/packages/data/migrations:/migrations --network host migrate/migrate:v4.5.0 -path=/migrations/ -database postgres://george:example@localhost:5432/george?sslmode=disable up",
+    "migrate-down": "docker run -v /Users/TGP/dev/george/packages/data/migrations:/migrations --network host migrate/migrate:v4.5.0 -path=/migrations/ -database postgres://george:example@localhost:5432/george?sslmode=disable down",
+    "docker-migrate-up": "./migrate -path=/migrations/ -database postgres://$GEORGE_POSTGRES_USER:$GEORGE_POSTGRES_PASSWORD@$GEORGE_POSTGRES_HOST:5432/george?sslmode=disable up",
+    "docker-migrate-down": "./migrate -path=/migrations/ -database postgres://$GEORGE_POSTGRES_USER:$GEORGE_POSTGRES_PASSWORD@$GEORGE_POSTGRES_HOST:5432/george?sslmode=disable down"
+  }
+}

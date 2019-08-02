@@ -1,0 +1,17 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "build": "npm run bootstrap && ./packages/scripts/build.sh",
+    "gatsby": "gatsby",
+    "lerna": "lerna run",
+    "bootstrap": "lerna bootstrap",
+    "connect": "eval $(docker-machine env -u)",
+    "start": "docker-compose up -d",
+    "stop": "docker-compose stop",
+    "delete": "docker-compose down -v"
+  },
+  "devDependencies": {
+    "lerna": "^3.4.0"
+  }
+}

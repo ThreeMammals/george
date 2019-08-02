@@ -1,0 +1,62 @@
+{
+  "name": "@george/components",
+  "version": "1.0.17",
+  "description": "TODO:",
+  "author": "Tom Gardham-Pallister <tom@threemammals.com>",
+  "homepage": "https://github.com/TomPallister/george#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@george/scripts": "^1.0.10",
+    "apollo-cache-inmemory": "^1.6.2",
+    "apollo-client": "^2.6.3",
+    "apollo-link-http": "^1.5.15",
+    "graphql": "^14.4.2",
+    "graphql-tag": "^2.10.1",
+    "node-fetch": "^2.6.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.2",
+    "react-apollo": "^2.5.8",
+    "react-dom": "^16.8.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "9.x",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-react-app": "^3.0.8",
+    "eslint-config-react-tools": "1.x.x",
+    "eslint-plugin-flowtype": "2.x",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.8.0",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomPallister/george.git"
+  },
+  "scripts": {
+    "build": "webpack  --mode=production",
+    "build-ci": "npm run build && ./node_modules/@george/scripts/setup-npmrc.sh && npm publish && ./node_modules/@george/scripts/teardown-npmrc.sh",
+    "test": "jest --coverage --verbose --detectOpenHandles"
+  },
+  "bugs": {
+    "url": "https://github.com/TomPallister/george/issues"
+  }
+}
