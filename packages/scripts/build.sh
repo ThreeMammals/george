@@ -18,7 +18,7 @@ docker run --rm \
     --mount type=bind,source=$(which docker),target=$(which docker) \
     -v "${HOME}/.docker/config.json:/root/.docker/config.json" \
     -v "${HOME}/.npm:/root/.npm" \
-    -v ${HOME}/.ssh:/root/.ssh \
+    # -v ${HOME}/.ssh:/root/.ssh \
     -v "$(pwd):/code" \
     -w "/code" \
     node:10.16.1-jessie
