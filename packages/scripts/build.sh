@@ -18,12 +18,12 @@ docker run --rm \
     --mount type=bind,source=$(which docker),target=$(which docker) \
     -v "${HOME}/.docker/config.json:/root/.docker/config.json" \
     -v "${HOME}/.npm:/root/.npm" \
-    # -v ${HOME}/.ssh:/root/.ssh \
     -v "$(pwd):/code" \
     -w "/code" \
     node:10.16.1-jessie \
     /bin/bash -c \
-    "# bootstrap only the packages we need to build
+    "npm install && \
+    # bootstrap only the packages we need to build
     lerna bootstrap --no-ci --scope=${changed_packages} && \
     # do all the versioning and push the tags back to the remote
     lerna version --conventional-commits --changelog-preset angular --yes
