@@ -31,10 +31,3 @@ docker run --rm \
     # lerna run --scope=${changed_packages} --stream --concurrency=1 build-ci && \
     # # publish all the packages that have changed
     # lerna run --scope=${changed_packages} --stream --concurrency=1 publish
-
-
-
-
-
-
-
