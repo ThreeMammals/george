@@ -7,6 +7,9 @@ jobs:
   build:
     executor: base
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "0b:55:81:26:1a:74:cd:f9:ba:e3:55:1d:67:3e:77:2f"
       - checkout
       - restore_cache:
           keys:
