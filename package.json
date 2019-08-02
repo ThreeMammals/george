@@ -2,7 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "build": "npm run bootstrap && ./packages/scripts/build.sh",
+    "build": "./packages/scripts/build.sh",
     "gatsby": "gatsby",
     "lerna": "lerna run",
     "bootstrap": "lerna bootstrap",
