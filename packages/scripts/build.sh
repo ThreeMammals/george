@@ -21,7 +21,7 @@ docker run --rm \
     # -v ${HOME}/.ssh:/root/.ssh \
     -v "$(pwd):/code" \
     -w "/code" \
-    node:10.16.1-jessie
+    node:10.16.1-jessie \
     # bootstrap only the packages we need to build
     lerna bootstrap --no-ci --scope=${changed_packages} && \
     # do all the versioning and push the tags back to the remote
