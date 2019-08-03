@@ -61,5 +61,4 @@ workflows:
       - build-pr:
          filters:
            branches:
-            only: /^(?!pull\/).*$/
             ignore: master
