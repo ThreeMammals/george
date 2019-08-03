@@ -1,28 +1,5 @@
 #!/bin/sh
-
-ls /home/circleci/.ssh/
-ls -l /home/circleci/.ssh/
-echo "whoami"
-echo $(whoami)
-echo "chmod"
-chmod 700 /home/circleci/.ssh/config
-echo "chown"
-chown root /home/circleci/.ssh/config
-
-# lerna needs these 
-git config --global user.email "tom@threemammals.com"
-git config --global user.name "Tom Pallister"
-
-# Get the packages that have changed
-changed_packages=$(echo "{$(lerna changed --json --loglevel=silent | jq -c -r 'map(.name) | join(",")'),}")
-
-echo "changed_packages=${changed_packages}"
-
-if [ ${changed_packages} = "{,}" ] || [ ${changed_packages} = "{}" ] || [ ${changed_packages} = {} ]
-then
-  echo "No packages were changed, nothing to build....if there was something to build put it in a package!!"
-  exit 0
-fi
+changed_packages=$1
 
 npm install 
 # bootstrap only the packages we need to build
