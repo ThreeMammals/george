@@ -30,7 +30,9 @@ describe('saveMedia', () => {
     fs.unlinkSync('./__tests__/a/');
     fs.unlinkSync('./__tests__/');
     console.log('CLOSING CONNECTION');
-    server.close();
+    server.close(() => {
+      console.log('Http server closed.');
+    });
   });
 
   it('should save image', async () => {
