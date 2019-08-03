@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo $CIRCLE_BRANCH
+
 # lerna needs these mmmmmmms
 git config --global user.email "tom@threemammals.com"
 git config --global user.name "Tom Pallister"
