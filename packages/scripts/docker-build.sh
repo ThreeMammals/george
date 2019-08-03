@@ -1,5 +1,5 @@
 #!/bin/sh
-
+# this scripts exist to run the build in a container. The image for the container is from packages/build
 docker run --rm \
     --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
     --mount type=bind,source=$(which docker),target=$(which docker) \
