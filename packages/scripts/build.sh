@@ -1,5 +1,4 @@
 #!/bin/sh
-
 git config --global user.email "tom@threemammals.com"
 git config --global user.name "Tom Pallister"
 
