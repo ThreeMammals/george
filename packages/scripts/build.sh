@@ -1,5 +1,8 @@
 #!/bin/sh
 
+chmod 600 ~/.ssh/config
+chown $USER ~/.ssh/config
+
 # lerna needs these 
 git config --global user.email "tom@threemammals.com"
 git config --global user.name "Tom Pallister"
