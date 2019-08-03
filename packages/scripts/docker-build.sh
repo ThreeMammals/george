@@ -16,6 +16,7 @@ then
 fi
 
 # do all the versioning and push the tags back to the remote
+# we do this before the docker container because we need the ssh key for it
 lerna version --conventional-commits --changelog-preset angular --yes
 
 docker run --rm \
