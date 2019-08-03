@@ -40,6 +40,8 @@ One of the cool things about react-static is that it supports incremental builds
     ```bash
     export GEORGE_ACR_LOGIN_NAME=XXX
     export GEORGE_ACR_URL=XXX.azurecr.io
+    export GEORGE_ACR_USERNAME=XXX
+    export GEORGE_ACR_PASSWORD=XXX
     ```
 
     - AWS

@@ -3,6 +3,158 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.54](https://github.com/ThreeMammals/george/compare/@george/api@1.0.53...@george/api@1.0.54) (2019-08-03)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.53](https://github.com/ThreeMammals/george/compare/@george/api@1.0.52...@george/api@1.0.53) (2019-08-03)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.52](https://github.com/ThreeMammals/george/compare/@george/api@1.0.51...@george/api@1.0.52) (2019-08-03)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.51](https://github.com/ThreeMammals/george/compare/@george/api@1.0.50...@george/api@1.0.51) (2019-08-03)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.50](https://github.com/ThreeMammals/george/compare/@george/api@1.0.49...@george/api@1.0.50) (2019-08-03)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.49](https://github.com/ThreeMammals/george/compare/@george/api@1.0.48...@george/api@1.0.49) (2019-08-03)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.48](https://github.com/ThreeMammals/george/compare/@george/api@1.0.47...@george/api@1.0.48) (2019-08-03)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.47](https://github.com/ThreeMammals/george/compare/@george/api@1.0.46...@george/api@1.0.47) (2019-08-03)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.46](https://github.com/ThreeMammals/george/compare/@george/api@1.0.45...@george/api@1.0.46) (2019-08-03)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.45](https://github.com/ThreeMammals/george/compare/@george/api@1.0.44...@george/api@1.0.45) (2019-08-03)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.44](https://github.com/ThreeMammals/george/compare/@george/api@1.0.43...@george/api@1.0.44) (2019-08-03)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.43](https://github.com/ThreeMammals/george/compare/@george/api@1.0.42...@george/api@1.0.43) (2019-08-03)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.42](https://github.com/ThreeMammals/george/compare/@george/api@1.0.41...@george/api@1.0.42) (2019-08-03)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.41](https://github.com/ThreeMammals/george/compare/@george/api@1.0.39...@george/api@1.0.41) (2019-08-03)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.40](https://github.com/ThreeMammals/george/compare/@george/api@1.0.39...@george/api@1.0.40) (2019-08-03)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.39](https://github.com/ThreeMammals/george/compare/@george/api@1.0.38...@george/api@1.0.39) (2019-08-02)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.38](https://github.com/ThreeMammals/george/compare/@george/api@1.0.37...@george/api@1.0.38) (2019-08-02)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.37](https://github.com/ThreeMammals/george/compare/@george/api@1.0.36...@george/api@1.0.37) (2019-08-02)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
+## [1.0.36](https://github.com/ThreeMammals/george/compare/@george/api@1.0.35...@george/api@1.0.36) (2019-08-02)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
 ## 1.0.35 (2019-08-02)
 
 **Note:** Version bump only for package @george/api

@@ -3,6 +3,158 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.44](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.43...@george/serve@1.0.44) (2019-08-03)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.43](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.42...@george/serve@1.0.43) (2019-08-03)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.42](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.41...@george/serve@1.0.42) (2019-08-03)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.41](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.40...@george/serve@1.0.41) (2019-08-03)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.40](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.39...@george/serve@1.0.40) (2019-08-03)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.39](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.38...@george/serve@1.0.39) (2019-08-03)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.38](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.37...@george/serve@1.0.38) (2019-08-03)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.37](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.36...@george/serve@1.0.37) (2019-08-03)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.36](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.35...@george/serve@1.0.36) (2019-08-03)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.35](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.34...@george/serve@1.0.35) (2019-08-03)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.34](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.33...@george/serve@1.0.34) (2019-08-03)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.33](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.32...@george/serve@1.0.33) (2019-08-03)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.32](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.31...@george/serve@1.0.32) (2019-08-03)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.31](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.29...@george/serve@1.0.31) (2019-08-03)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.30](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.29...@george/serve@1.0.30) (2019-08-03)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.29](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.28...@george/serve@1.0.29) (2019-08-02)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.28](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.27...@george/serve@1.0.28) (2019-08-02)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.27](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.26...@george/serve@1.0.27) (2019-08-02)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
+## [1.0.26](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.25...@george/serve@1.0.26) (2019-08-02)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
 ## 1.0.25 (2019-08-02)
 
 **Note:** Version bump only for package @george/serve
