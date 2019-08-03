@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "./packages/scripts/docker-build.sh",
+    "build-pr": "./packages/scripts/docker-build-pr.sh",
     "gatsby": "gatsby",
     "lerna": "lerna run",
     "bootstrap": "lerna bootstrap",
