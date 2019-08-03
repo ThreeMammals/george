@@ -11,5 +11,7 @@ docker run --rm \
     -e GEORGE_NPMRC=${GEORGE_NPMRC} \
     -e GEORGE_ACR_LOGIN_NAME=${GEORGE_ACR_LOGIN_NAME} \
     -e GEORGE_ACR_URL=${GEORGE_ACR_URL} \
+    -e GEORGE_ACR_USERNAME=${GEORGE_ACR_USERNAME} \
+    -e GEORGE_ACR_PASSWORD=${GEORGE_ACR_PASSWORD} \
     george/build \
     ./packages/scripts/thing.sh
