@@ -1,6 +1,6 @@
 {
   "name": "@george/ingest",
-  "version": "1.0.49",
+  "version": "1.0.50",
   "description": "TODO:",
   "author": "Tom Gardham-Pallister <tom@threemammals.com>",
   "homepage": "",
@@ -23,7 +23,7 @@
     "publish": "./node_modules/@george/scripts/publish.sh"
   },
   "dependencies": {
-    "@george/scripts": "^1.0.32",
+    "@george/scripts": "^1.0.33",
     "@wordpress/block-serialization-default-parser": "^3.1.0",
     "amqplib": "^0.5.3",
     "cheerio": "^1.0.0-rc.3",
