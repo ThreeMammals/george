@@ -2919,14 +2919,14 @@ describe('blocksToReactTree', () => {
 
   it('should parse core embded spotify', () => {
     const expected = [{
-      type: 'core-embed/hulu',
+      type: 'core-embed/spotify',
       $$typeof: Symbol.for('react.element'),
       ref: null,
       props: {
         url: 'https://open.spotify.com/track/3f9Mzvd3URfbbIJBX4pz9Z',
         type: 'rich',
         providerNameSlug: 'spotify',
-        className: 'wp-block-embed-spotify wp-block-embed is-type-rich is-provider-spotify wp-embed-aspect-9-16 wp-has-aspect-ratio',
+        className: 'wp-embed-aspect-9-16 wp-has-aspect-ratio',
         style: {},
         children: [[{
           type: 'figure',
@@ -2934,7 +2934,7 @@ describe('blocksToReactTree', () => {
             url: 'https://open.spotify.com/track/3f9Mzvd3URfbbIJBX4pz9Z',
             type: 'rich',
             providerNameSlug: 'spotify',
-            className: 'wp-embed-aspect-9-16 wp-has-aspect-ratio',
+            className: 'wp-block-embed-spotify wp-block-embed is-type-rich is-provider-spotify wp-embed-aspect-9-16 wp-has-aspect-ratio',
             style: {},
             children: [{
               type: 'div',
@@ -3452,7 +3452,7 @@ describe('blocksToReactTree', () => {
 
   it('should parse core embded hulu', () => {
     const expected = [{
-      type: 'core-embed/dailymotion',
+      type: 'core-embed/hulu',
       $$typeof: Symbol.for('react.element'),
       ref: null,
       props: {

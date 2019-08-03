@@ -4,6 +4,7 @@ const express = require('express');
 const { saveMedia } = require('../src/save-media');
 
 let app;
+let server;
 
 describe('saveMedia', () => {
   const pathThatDoesExist = './__tests__/image_tests/test-image.png';
@@ -16,7 +17,7 @@ describe('saveMedia', () => {
 
     app.use(express.static(dir));
 
-    app.listen(3123, () => {
+    server = app.listen(3123, () => {
       console.log('Listening on http://localhost:3123/');
     });
   });
@@ -28,6 +29,7 @@ describe('saveMedia', () => {
     fs.unlinkSync('./__tests__/a/b/');
     fs.unlinkSync('./__tests__/a/');
     fs.unlinkSync('./__tests__/');
+    server.close();
   });
 
   it('should save image', async () => {
