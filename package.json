@@ -2,7 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "build": "./packages/scripts/build.sh",
+    "build": "./packages/scripts/docker-build.sh",
     "gatsby": "gatsby",
     "lerna": "lerna run",
     "bootstrap": "lerna bootstrap",
