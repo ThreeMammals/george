@@ -26,4 +26,4 @@ lerna run --scope=${changed_packages} --stream --concurrency=1 test
 # build all the packages that have changed and any deps..for docker containers this should build them for node packages it will push them to npm or private repo
 lerna run --scope=${changed_packages} --stream --concurrency=1 build-ci
 # publish all the packages that have changed
-# lerna run --scope=${changed_packages} --stream --concurrency=1 publish
+lerna run --scope=${changed_packages} --stream --concurrency=1 publish
