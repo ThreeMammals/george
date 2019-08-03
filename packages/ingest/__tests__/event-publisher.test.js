@@ -14,6 +14,10 @@ describe('publish', () => {
 
     const result = await publish(event, 'test');
     expect(result).toEqual(event);
-    fs.unlinkSync(`./publish/test-${event.MessageAttributes.messageId.StringValue}.json`);
+    try {
+      fs.unlinkSync(`./publish/test-${event.MessageAttributes.messageId.StringValue}.json`);
+    } catch (error) {
+      console.log(error);
+    }
   });
 });
