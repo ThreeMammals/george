@@ -2,7 +2,9 @@ git config --global user.email "tom@threemammals.com"
 git config --global user.name "Tom Pallister"
 
 # Get the packages that have changed
-changed_packages=$(echo "{$(lerna changed --json --loglevel=silent | jq -c -r 'map(.name) | join(",")'),}")
+# changed_packages=$(echo "{$(lerna changed --json --loglevel=silent | jq -c -r 'map(.name) | join(",")'),}")
+
+changed_packages={@george/components,}
 
 echo "changed_packages=${changed_packages}"
 
@@ -18,9 +20,10 @@ docker run --rm \
     --mount type=bind,source=$(which docker),target=$(which docker) \
     -v "${HOME}/.docker/config.json:/root/.docker/config.json" \
     -v "${HOME}/.npm:/root/.npm" \
+    -v ${HOME}/.ssh:/root/.ssh \
     -v "$(pwd):/code" \
     -w "/code" \
-    node:10.16.1-jessie \
+    george/build \
     /bin/bash -c \
     "npm install && \
     # bootstrap only the packages we need to build
