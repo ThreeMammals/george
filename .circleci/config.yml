@@ -62,3 +62,4 @@ workflows:
          filters:
            branches:
             only: /^(?!pull\/).*$/
+            ignore: master
