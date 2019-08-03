@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.56](https://github.com/ThreeMammals/george/compare/@george/render@1.0.55...@george/render@1.0.56) (2019-08-03)
+
+**Note:** Version bump only for package @george/render
+
+
+
+
+
 ## [1.0.55](https://github.com/ThreeMammals/george/compare/@george/render@1.0.53...@george/render@1.0.55) (2019-08-03)
 
 **Note:** Version bump only for package @george/render
