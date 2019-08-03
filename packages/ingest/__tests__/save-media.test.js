@@ -29,6 +29,7 @@ describe('saveMedia', () => {
     fs.unlinkSync('./__tests__/a/b/');
     fs.unlinkSync('./__tests__/a/');
     fs.unlinkSync('./__tests__/');
+    console.log('CLOSING CONNECTION');
     server.close();
   });
 
