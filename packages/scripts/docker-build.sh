@@ -16,7 +16,8 @@ then
 fi
 
 # do all the versioning and push the tags back to the remote
-# we do this before the docker container because we need the ssh key for it
+# we do this before the docker container because we need the ssh key for it and 
+# I cant get the ssh key to work in the container on circlci
 lerna version --conventional-commits --changelog-preset angular --yes
 
 docker run --rm \
