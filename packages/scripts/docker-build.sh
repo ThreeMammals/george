@@ -2,6 +2,8 @@
 # this scripts exist to run the build in a container. The image for the container is from packages/build
 
 ls ${HOME}/.ssh
+chmod 600 ~/.ssh/config
+chown $USER ~/.ssh/config
 
 docker run --rm \
     --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
