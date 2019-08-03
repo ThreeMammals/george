@@ -15,6 +15,9 @@ then
   exit 0
 fi
 
+# do all the versioning and push the tags back to the remote
+lerna version --conventional-commits --changelog-preset angular --yes
+
 docker run --rm \
     --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
     --mount type=bind,source=$(which docker),target=$(which docker) \
@@ -27,4 +30,4 @@ docker run --rm \
     -e GEORGE_ACR_USERNAME=${GEORGE_ACR_USERNAME} \
     -e GEORGE_ACR_PASSWORD=${GEORGE_ACR_PASSWORD} \
     mijitt0m/build \
-    ./packages/scripts/build.sh changed_packages
+    ./packages/scripts/build.sh ${changed_packages}
