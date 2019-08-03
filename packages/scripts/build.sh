@@ -1,7 +1,9 @@
 #!/bin/sh
 
-chmod 600 ~/.ssh/config
-chown $USER ~/.ssh/config
+THIS=echo $(whoami)
+echo $THIS
+chmod 700 ~/.ssh/config
+chown $THIS ~/.ssh/config
 
 # lerna needs these 
 git config --global user.email "tom@threemammals.com"
