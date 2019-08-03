@@ -23,14 +23,9 @@ beforeAll(() => {
 afterAll((done) => {
   server.close(() => {
     done();
-    // console.log('CLOSING CONNECTION');
   });
   fs.unlinkSync(pathThatDoesExist);
   fs.unlinkSync(pathThatDoesntExist);
-  // fs.unlinkSync('./__tests__/a/b/c/');
-  // fs.unlinkSync('./__tests__/a/b/');
-  // fs.unlinkSync('./__tests__/a/');
-  // fs.unlinkSync('./__tests__/');
 });
 
 describe('saveMedia', () => {

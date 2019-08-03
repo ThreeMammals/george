@@ -1,4 +1,6 @@
 #!/bin/sh
+
+# lerna needs these 
 git config --global user.email "tom@threemammals.com"
 git config --global user.name "Tom Pallister"
 
