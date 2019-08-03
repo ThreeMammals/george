@@ -1,13 +1,13 @@
 #!/bin/sh
 
-ls /root/.ssh/
-ls -l /root/.ssh/
+ls /home/circleci/.ssh/
+ls -l /home/circleci/.ssh/
 echo "whoami"
 echo $(whoami)
 echo "chmod"
-chmod 700 ~/.ssh/config
+chmod 700 /home/circleci/.ssh/config
 echo "chown"
-chown root ~/.ssh/config
+chown root /home/circleci/.ssh/config
 
 # lerna needs these 
 git config --global user.email "tom@threemammals.com"

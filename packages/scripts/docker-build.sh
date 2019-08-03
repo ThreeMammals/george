@@ -4,8 +4,8 @@
 docker run --rm \
     --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
     --mount type=bind,source=$(which docker),target=$(which docker) \
-    -v "${HOME}/.npm:/root/.npm" \
-    -v ${HOME}/.ssh:/root/.ssh \
+    -v "${HOME}/.npm:/home/circleci/.npm" \
+    -v "${HOME}/.ssh:/home/circleci/.ssh" \
     -v "$(pwd):/code" \
     -w "/code" \
     -e GEORGE_NPMRC=${GEORGE_NPMRC} \
