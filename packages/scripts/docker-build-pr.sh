@@ -15,8 +15,10 @@ then
   exit 0
 fi
 
+# Versioning for PRs. We use the commit sha to make the version in package.json unique
+# so that when we push node modules to repo they are unique. This means we can pull those
+# into containers for PR builds so we are building against everything on the PR.
 COMMIT=$(git rev-parse HEAD)
-# do the versioning
 lerna version prepatch --preid $COMMIT --conventional-commits --no-changelog --no-git-tag-version --yes
 
 docker run --rm \
