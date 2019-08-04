@@ -1,6 +1,6 @@
 {
   "name": "@george/components",
-  "version": "1.0.43-alpha.2",
+  "version": "1.0.43-alpha.3",
   "description": "TODO:",
   "author": "Tom Gardham-Pallister <tom@threemammals.com>",
   "homepage": "https://github.com/TomPallister/george#readme",
@@ -10,7 +10,7 @@
     "dist"
   ],
   "dependencies": {
-    "@george/scripts": "^1.0.36-alpha.2",
+    "@george/scripts": "^1.0.36-alpha.3",
     "apollo-cache-inmemory": "^1.6.2",
     "apollo-client": "^2.6.3",
     "apollo-link-http": "^1.5.15",
