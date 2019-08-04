@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.45](https://github.com/TomPallister/george/compare/@george/components@1.0.44...@george/components@1.0.45) (2019-08-04)
+
+**Note:** Version bump only for package @george/components
+
+
+
+
+
 ## [1.0.44](https://github.com/TomPallister/george/compare/@george/components@1.0.44-a11ebaf91170c7f83a169757eeb9284b403f0a78.1...@george/components@1.0.44) (2019-08-04)
 
 **Note:** Version bump only for package @george/components
