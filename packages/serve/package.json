@@ -1,13 +1,13 @@
 {
   "name": "@george/serve",
-  "version": "1.0.50-alpha.12",
+  "version": "1.0.50-alpha.13",
   "description": "TODO:",
   "author": "Tom Gardham-Pallister <tom@threemammals.com>",
   "homepage": "",
   "license": "ISC",
   "main": "src/wordpress.js",
   "dependencies": {
-    "@george/scripts": "^1.0.36-alpha.12"
+    "@george/scripts": "^1.0.36-alpha.13"
   },
   "directories": {
     "src": "src",
