@@ -16,7 +16,7 @@ then
 fi
 
 # do the versioning but don't push it back to the remote
-# lerna version prerelease --conventional-commits --no-changelog --no-git-tag-version --no-push --yes
+lerna version prerelease --conventional-commits --no-changelog --no-git-tag-version --yes
 
 docker run --rm \
     --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
