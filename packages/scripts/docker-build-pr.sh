@@ -24,7 +24,7 @@ git commit -m "PR"
 
 BRANCH=echo $(git branch | grep \* | cut -d ' ' -f2)
 
-git push --set-upstream origin BRANCH
+git push --set-upstream origin $BRANCH
 
 # docker run --rm \
 #     --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
