@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.44](https://github.com/ThreeMammals/george/compare/@george/wordpress@1.0.43...@george/wordpress@1.0.44) (2019-08-04)
+
+**Note:** Version bump only for package @george/wordpress
+
+
+
+
+
 ## [1.0.43](https://github.com/ThreeMammals/george/compare/@george/wordpress@1.0.42...@george/wordpress@1.0.43) (2019-08-04)
 
 **Note:** Version bump only for package @george/wordpress
