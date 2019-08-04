@@ -22,7 +22,7 @@ git add .
 
 git commit -m "PR"
 
-BRANCH=${echo $(git branch | grep \* | cut -d ' ' -f2)}
+BRANCH=$(git branch | grep \* | cut -d ' ' -f2)
 
 git push --set-upstream origin $BRANCH
 
