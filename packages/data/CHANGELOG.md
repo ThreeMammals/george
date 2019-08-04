@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.43](https://github.com/ThreeMammals/george/compare/@george/data@1.0.42...@george/data@1.0.43) (2019-08-04)
+
+**Note:** Version bump only for package @george/data
+
+
+
+
+
 ## [1.0.42](https://github.com/ThreeMammals/george/compare/@george/data@1.0.41...@george/data@1.0.42) (2019-08-04)
 
 **Note:** Version bump only for package @george/data
