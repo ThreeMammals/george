@@ -15,8 +15,11 @@ then
   exit 0
 fi
 
-# do the versioning but don't push it back to the remote
-# lerna version prerelease --conventional-commits --no-changelog --no-git-tag-version --no-push --yes
+# Versioning for PRs. We use the commit sha to make the version in package.json unique
+# so that when we push node modules to repo they are unique. This means we can pull those
+# into containers for PR builds so we are building against everything on the PR.
+COMMIT=$(git rev-parse HEAD)
+lerna version prepatch --preid $COMMIT --conventional-commits --no-changelog --no-git-tag-version --yes
 
 docker run --rm \
     --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
