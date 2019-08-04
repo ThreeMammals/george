@@ -1,6 +1,6 @@
 {
   "name": "@george/api",
-  "version": "1.0.62-alpha.1",
+  "version": "1.0.62-alpha.2",
   "description": "TODO: test the another change",
   "author": "Tom Gardham-Pallister <tom@threemammals.com>",
   "homepage": "",
@@ -23,7 +23,7 @@
     "publish": "./node_modules/@george/scripts/publish.sh"
   },
   "dependencies": {
-    "@george/scripts": "^1.0.36-alpha.1",
+    "@george/scripts": "^1.0.36-alpha.2",
     "apollo-server": "^2.4.8",
     "graphql": "^14.1.1",
     "graphql-iso-date": "^3.6.1",
