@@ -1598,4 +1598,20 @@ describe('postContentToBlocks', () => {
 
     expect(result).toEqual(expected);
   });
+
+  it('should parse paragraph with br', () => {
+    const expected = [{
+      blockName: 'core/paragraph',
+      attrs: {},
+      innerBlocks: [],
+      innerHTML: '\n<p>text <br></p>\n',
+      innerContent: ['\n<p>text <br></p>\n'],
+    }];
+
+    const input = '<!-- wp:paragraph -->\n<p>text <br></p>\n<!-- /wp:paragraph -->';
+
+    const result = postContentToBlocks(input);
+
+    expect(result).toEqual(expected);
+  });
 });

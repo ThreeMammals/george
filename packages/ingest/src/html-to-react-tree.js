@@ -71,6 +71,19 @@ const cheerioToReact = (node) => {
     type = 'hr';
   }
 
+  if (node.name === 'br') {
+    return {
+      type,
+      props: {
+        ...props,
+        style,
+        className: className === undefined ? null : className,
+      },
+      $$typeof: Symbol.for('react.element'),
+      ref: null,
+    };
+  }
+
   return {
     type,
     props: {

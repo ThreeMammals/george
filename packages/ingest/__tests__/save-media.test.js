@@ -5,8 +5,8 @@ const { saveMedia } = require('../src/save-media');
 
 let app;
 let server;
-const pathThatDoesExist = './__tests__/image_tests/test-image.png';
-const pathThatDoesntExist = './__tests__/a/b/c/test-image.png';
+const pathThatDoesExist = './__tests__/test-data/image_tests/test-image.png';
+const pathThatDoesntExist = './__tests__/test-data/a/b/c/test-image.png';
 
 beforeAll(() => {
   app = express();
