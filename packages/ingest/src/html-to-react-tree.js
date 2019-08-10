@@ -71,6 +71,7 @@ const cheerioToReact = (node) => {
     type = 'hr';
   }
 
+  // todo sort this hack out?
   if (node.name === 'br') {
     return {
       type,
