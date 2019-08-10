@@ -31,7 +31,7 @@ module.exports.default = {
       },
     } = posts;
 
-    // partial build of the blog...
+    // partial build of the blog....
     if (incremental) {
       // get the args from command line
       const args = process.argv;
