@@ -71,7 +71,7 @@ const cheerioToReact = (node) => {
     type = 'hr';
   }
 
-  // todo sort this hack out?
+  // todo sort this hack out? for some reason it didn't work?
   if (node.name === 'br') {
     return {
       type,
