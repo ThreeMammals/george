@@ -18,6 +18,10 @@ module.exports.default = {
                   urlPath
                   tree
                   sticky
+                  meta {
+                    title
+                    description
+                  }
                 }
                 stickyPosts {
                   externalId
@@ -48,6 +52,10 @@ module.exports.default = {
                     urlPath
                     tree
                     sticky
+                    meta {
+                      title
+                      description
+                    }
                   }
                   stickyPosts {
                     externalId

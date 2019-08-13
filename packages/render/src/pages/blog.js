@@ -1,12 +1,18 @@
 import React from 'react';
-import { useRouteData } from 'react-static';
-//
+import {
+  useRouteData,
+  Head,
+} from 'react-static';
 import { Link } from '@reach/router';
 
 export default function Blog() {
   const { allPosts } = useRouteData();
   return (
     <div>
+      <Head>
+        <title>Blog</title>
+        <meta name="Description" content="Links out to all the blogs on the ThreeMammals website." />
+      </Head>
       <h1>It's blog time.</h1>
       <div>
         <a href="#bottom" id="top">
