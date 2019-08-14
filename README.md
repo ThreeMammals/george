@@ -65,7 +65,7 @@ One of the cool things about react-static is that it supports incremental builds
     1. Go to https://localhost/admin/wp-admin/install.php
     2. Install WP & Login
     3. Go to Plugins and Activate Pushy
-    4. Go to Settings > Pushy Options and tick AMQPPublisher and click Save Changes.
+    4. Go to Settings > Pushy Options and tick AMQPPublisher and enter rabbit as the location click Save Changes.
     5. Go to Settings > Permalinks and tick plain then save Changes.
 12. Check database migrations have worked
     1. Go to http://localhost:8080 and login using the postgres details from docker-compose.yml
