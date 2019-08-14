@@ -29,7 +29,7 @@ const postUpdated = (saveMedia, pool) => async (event) => {
   const dto = {
     postId: event.Message.ID,
     title: event.Message.post_title,
-    // todo - maybe use the post title and run some logic to lowercase and hyphenate it
+    // wordpress wants you to use post_name as the slug...maybe rename url_path to slug
     url_path: event.Message.post_name,
     tree: JSON.stringify(reactTree, handleSymbols),
     post_date: event.Message.post_date,
