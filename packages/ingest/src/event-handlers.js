@@ -1,6 +1,7 @@
 const { postContentToBlocks } = require('./post-content-to-blocks');
 const { blocksToReactTree } = require('./blocks-to-react-tree');
 const { parseMedia } = require('./parse-media');
+const { parseMeta } = require('./parse-meta');
 
 const handleSymbols = (name, value) => {
   if (typeof value === 'symbol') {
@@ -25,9 +26,7 @@ const postUpdated = (saveMedia, pool) => async (event) => {
   const postContent = await parseMedia(saveMedia, event.Message.post_content);
   const blocks = postContentToBlocks(postContent);
   const reactTree = blocksToReactTree(blocks);
-  // todo get the yoast meta from event.Message.post_meta in the function below.
-  // need to check if it exists etc...
-  // const meta = parseMeta(event.Message);
+  const meta = parseMeta(event.Message);
 
   const dto = {
     postId: event.Message.ID,
