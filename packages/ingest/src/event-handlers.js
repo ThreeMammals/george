@@ -45,13 +45,13 @@ const postUpdated = (saveMedia, pool) => async (event) => {
 
   if (exists.rows.length > 0) {
     // update
-    const updateSql = 'UPDATE posts SET title = $2, tree = $3, url_path = $4, post_modified = $5 WHERE external_id = $1 RETURNING *';
+    const updateSql = 'UPDATE posts SET title = $2, tree = $3, url_path = $4, post_modified = $5, meta_title = $6, meta_description = $7 WHERE external_id = $1 RETURNING *';
     const updateValues = [dto.postId, dto.title, dto.tree, dto.url_path, dto.post_modified];
     const res = await pool.query(updateSql, updateValues);
     return res;
   }
   // insert
-  const insertSql = 'INSERT INTO posts(external_id, title, tree, url_path, post_date, post_modified) VALUES($1, $2, $3, $4, $5, $6) RETURNING *';
+  const insertSql = 'INSERT INTO posts(external_id, title, tree, url_path, post_date, post_modified, meta_title, meta_description) VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *';
   // eslint-disable-next-line max-len
   const insertValues = [dto.postId, dto.title, dto.tree, dto.url_path, dto.post_date, dto.post_modified];
   const res = await pool.query(insertSql, insertValues);

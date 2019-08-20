@@ -34,6 +34,37 @@ describe('parseMeta', () => {
     expect(result).toEqual(expected);
   });
 
+  it('should parse when undefined post_meta and use post_title', () => {
+    const expected = {
+      title: 'test title',
+      description: '',
+
+    };
+    const input = {
+      post_title: 'test title',
+    };
+
+    const result = parseMeta(input);
+
+    expect(result).toEqual(expected);
+  });
+
+  it('should parse when null post_meta and use post_title', () => {
+    const expected = {
+      title: 'test title',
+      description: '',
+
+    };
+    const input = {
+      post_title: 'test title',
+      post_meta: null,
+    };
+
+    const result = parseMeta(input);
+
+    expect(result).toEqual(expected);
+  });
+
   it('should default to post_title if undefined yoast title', () => {
     const expected = {
       title: 'Hello world!',
