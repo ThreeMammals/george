@@ -9,13 +9,13 @@ wp-content/upgrade/
 wp-content/uploads/
 wp-content/mu-plugins/
 wp-content/wp-cache-config.php
-vendor/
-src/wp-content/uploads
-node_modules/
-node_modules
+wp-content/plugins/hello.php
 
 /.htaccess
 /license.txt
 /readme.html
 /sitemap.xml
 /sitemap.xml.gz
+
+composer.phar
+/vendor/
