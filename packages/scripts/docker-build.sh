@@ -1,6 +1,6 @@
 #!/bin/sh
 
-npm intall
+npm install
 
 # lerna needs these 
 git config --global user.email "tom@threemammals.com"
