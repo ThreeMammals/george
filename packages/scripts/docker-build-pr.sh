@@ -1,5 +1,6 @@
 #!/bin/sh
 
+npm intall
 # lerna needs these to push tags to remote
 git config --global user.email "tom@threemammals.com"
 git config --global user.name "Tom Pallister"
