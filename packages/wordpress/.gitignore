@@ -11,7 +11,7 @@ wp-content/mu-plugins/
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
 vendor/
-src/wp-content/plugins
+src/wp-content/plugins/pushy
 src/wp-content/uploads
 node_modules/
 node_modules
