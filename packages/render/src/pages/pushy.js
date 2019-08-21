@@ -1,7 +1,14 @@
 import React from 'react';
+import {
+  Head,
+} from 'react-static';
 
 export default () => (
   <div>
+    <Head>
+      <title>Pushy</title>
+      <meta name="Description" content="Pushy is an Open Source plugin that turns Wordpress into a headless CMS." />
+    </Head>
     <h1>Pushy</h1>
     <p>Open Source Headless Wordpress</p>
     <p>

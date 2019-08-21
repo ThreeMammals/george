@@ -1,6 +1,7 @@
 const { postContentToBlocks } = require('./post-content-to-blocks');
 const { blocksToReactTree } = require('./blocks-to-react-tree');
 const { parseMedia } = require('./parse-media');
+const { parseMeta } = require('./parse-meta');
 
 const handleSymbols = (name, value) => {
   if (typeof value === 'symbol') {
@@ -25,15 +26,18 @@ const postUpdated = (saveMedia, pool) => async (event) => {
   const postContent = await parseMedia(saveMedia, event.Message.post_content);
   const blocks = postContentToBlocks(postContent);
   const reactTree = blocksToReactTree(blocks);
+  const meta = parseMeta(event.Message);
 
   const dto = {
     postId: event.Message.ID,
     title: event.Message.post_title,
-    // todo - maybe use the post title and run some logic to lowercase and hyphenate it
+    // wordpress wants you to use post_name as the slug...maybe rename url_path to slug
     url_path: event.Message.post_name,
     tree: JSON.stringify(reactTree, handleSymbols),
     post_date: event.Message.post_date,
     post_modified: event.Message.post_modified,
+    meta_title: meta.title,
+    meta_description: meta.description,
   };
 
   // select
@@ -43,15 +47,15 @@ const postUpdated = (saveMedia, pool) => async (event) => {
 
   if (exists.rows.length > 0) {
     // update
-    const updateSql = 'UPDATE posts SET title = $2, tree = $3, url_path = $4, post_modified = $5 WHERE external_id = $1 RETURNING *';
-    const updateValues = [dto.postId, dto.title, dto.tree, dto.url_path, dto.post_modified];
+    const updateSql = 'UPDATE posts SET title = $2, tree = $3, url_path = $4, post_modified = $5, meta_title = $6, meta_description = $7 WHERE external_id = $1 RETURNING *';
+    const updateValues = [dto.postId, dto.title, dto.tree, dto.url_path, dto.post_modified, dto.meta_title, dto.meta_description];
     const res = await pool.query(updateSql, updateValues);
     return res;
   }
   // insert
-  const insertSql = 'INSERT INTO posts(external_id, title, tree, url_path, post_date, post_modified) VALUES($1, $2, $3, $4, $5, $6) RETURNING *';
+  const insertSql = 'INSERT INTO posts(external_id, title, tree, url_path, post_date, post_modified, meta_title, meta_description) VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *';
   // eslint-disable-next-line max-len
-  const insertValues = [dto.postId, dto.title, dto.tree, dto.url_path, dto.post_date, dto.post_modified];
+  const insertValues = [dto.postId, dto.title, dto.tree, dto.url_path, dto.post_date, dto.post_modified, dto.meta_title, dto.meta_description];
   const res = await pool.query(insertSql, insertValues);
   return res;
 };

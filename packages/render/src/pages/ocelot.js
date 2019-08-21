@@ -1,7 +1,14 @@
 import React from 'react';
+import {
+  Head,
+} from 'react-static';
 
 export default () => (
   <div>
+    <Head>
+      <title>Ocelot</title>
+      <meta name="Description" content="Ocelot is an Open Source cross platform API Gateway built using .NET core." />
+    </Head>
     <a href="https://github.com/threemammals/ocelot">
       <img src="/ocelot_logo.png" alt="Ocelot" />
     </a>

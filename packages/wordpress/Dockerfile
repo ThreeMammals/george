@@ -7,4 +7,4 @@ RUN docker-php-ext-install sockets
 COPY ./src/wp-content /var/www/html/wp-content
 
 RUN pwd
-RUN ls ./wp-content/plugins
+RUN ls ./wp-content/plugins/pushy/src

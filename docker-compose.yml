@@ -20,7 +20,9 @@ services:
      image: george/wordpress
      volumes:
        - wordpress_data:/var/www/html
-      #  allows image upload via container for some reason cannot write to normal volume need to work out
+       #  for dev locally comment out when testing?
+       # - ./packages/wordpress/src/wp-content/plugins/pushy:/var/www/html/wp-content/plugins/pushy
+       #  allows image upload via container for some reason cannot write to normal volume need to work out
        - ./packages/wordpress/src/wp-content/uploads:/var/www/html/wp-content/uploads
      restart: always
      environment:

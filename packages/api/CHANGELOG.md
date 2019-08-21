@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.68](https://github.com/ThreeMammals/george/compare/@george/api@1.0.67...@george/api@1.0.68) (2019-08-21)
+
+**Note:** Version bump only for package @george/api
+
+
+
+
+
 ## [1.0.67](https://github.com/ThreeMammals/george/compare/@george/api@1.0.66...@george/api@1.0.67) (2019-08-10)
 
 **Note:** Version bump only for package @george/api

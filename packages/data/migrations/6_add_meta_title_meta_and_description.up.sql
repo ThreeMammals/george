@@ -1,0 +1,5 @@
+ALTER TABLE posts
+ADD COLUMN meta_title VARCHAR (500) NOT NULL DEFAULT 'not-set';
+
+ALTER TABLE posts
+ADD COLUMN meta_description VARCHAR (500) NOT NULL DEFAULT 'not-set';

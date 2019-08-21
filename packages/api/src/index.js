@@ -25,6 +25,12 @@ const typeDefs = gql`
     sticky: Boolean
     postDate: DateTime
     postModified: DateTime
+    meta: Meta
+  }
+
+  type Meta {
+    title: String
+    description: String
   }
 
   type StickyPost {
@@ -72,6 +78,10 @@ const resolvers = {
         postDate: rows[0].post_date,
         postModified: rows[0].post_modified,
         tree: rows[0].tree,
+        meta: {
+          title: rows[0].meta_title,
+          description: rows[0].meta_description,
+        },
       };
     },
     async posts(parent, args, context, info) {
@@ -97,6 +107,10 @@ const resolvers = {
         postDate: r.post_date,
         postModified: r.post_modified,
         tree: r.tree,
+        meta: {
+          title: r.meta_title,
+          description: r.meta_description,
+        },
       }));
     },
     async stickyPosts(parent, args, context, info) {
