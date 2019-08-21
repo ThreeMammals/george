@@ -9,9 +9,9 @@ wp-content/upgrade/
 wp-content/uploads/
 wp-content/mu-plugins/
 wp-content/wp-cache-config.php
-wp-content/
+wp-content/plugins/hello.php
 vendor/
-src/wp-content/
+src/wp-content/plugins
 src/wp-content/uploads
 node_modules/
 node_modules
