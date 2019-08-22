@@ -33,5 +33,5 @@ docker run --rm \
     -e GEORGE_ACR_URL=${GEORGE_ACR_URL} \
     -e GEORGE_ACR_USERNAME=${GEORGE_ACR_USERNAME} \
     -e GEORGE_ACR_PASSWORD=${GEORGE_ACR_PASSWORD} \
-    mijitt0m/build:1.0.0 \
+    mijitt0m/build:1.0.1 \
     ./packages/scripts/build.sh ${changed_packages}

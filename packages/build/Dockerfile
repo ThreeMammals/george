@@ -39,7 +39,9 @@ RUN apt-get update && apt-get install -y \
     wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg && \
     echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php7.3.list && \
     apt update && \
-    apt -y install php7.3 && \
+    apt -y install php7.3 \
+    php-bcmath && \
+    php7.3-bcmath \
+    php7.3-xml \
     curl -sS https://getcomposer.org/installer -o composer-setup.php && \
     php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-
