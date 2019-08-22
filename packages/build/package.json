@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "docker build -t mijitt0m/build .",
-    "build-ci": "npm run build",
-    "publish": "push.sh",
+    "build-ci": "npm run build && npm run push",
+    "push": "push.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
