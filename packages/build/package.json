@@ -1,0 +1,14 @@
+{
+  "name": "@mijitt0m/build",
+  "version": "1.0.0",
+  "description": "docker build -t mijitt0m/build . docker push mijitt0m/build:latest",
+  "main": "index.js",
+  "scripts": {
+    "build": "docker build -t mijitt0m/build .",
+    "build-ci": "npm run build",
+    "publish": "push.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,1 @@
+docker login -u $GEORGE_DOCKER_USERNAME -p $GEORGE_DOCKER_PASSWORD && docker push mijitt0m/build:latest
