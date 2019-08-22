@@ -1,6 +1,11 @@
 FROM node:10-slim as node
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get upgrade && \
+    apt-get install software-properties-common && \
+    add-apt-repository ppa:ondrej/php && \
+    apt-get update && \
+    apt-get install php7.3 && \
+    apt-get update && apt-get install -y \
     apt-transport-https \
     build-essential \
     ca-certificates \
@@ -36,5 +41,4 @@ RUN apt-get update && apt-get install -y \
     tee /etc/apt/sources.list.d/azure-cli.list && \
     apt-get update && \
     apt-get install azure-cli && \
-    php7.3 && \
     curl --silent --show-error https://getcomposer.org/installer | php
