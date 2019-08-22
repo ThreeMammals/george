@@ -37,7 +37,7 @@ RUN apt-get update && apt-get install -y \
     apt-get update && \
     apt-get install azure-cli && \
     wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg && \
-    echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php7.3.list && \
+    echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php7.3.list && \
     apt update && \
     apt -y install php7.3 && \
     curl -sS https://getcomposer.org/installer | php
