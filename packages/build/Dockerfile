@@ -1,7 +1,7 @@
 FROM node:10-slim as node
 
-RUN apt-get update && apt-get upgrade && \
-    apt-get install software-properties-common && \
+RUN apt-get update && apt-get upgrade -y && \
+    apt-get install -y software-properties-common && \
     add-apt-repository ppa:ondrej/php && \
     apt-get update && \
     apt-get install php7.3 && \
