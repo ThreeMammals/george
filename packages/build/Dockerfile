@@ -40,5 +40,6 @@ RUN apt-get update && apt-get install -y \
     echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php7.3.list && \
     apt update && \
     apt -y install php7.3 && \
-    curl -sS https://getcomposer.org/installer | php
+    curl -sS https://getcomposer.org/installer -o composer-setup.php && \
+    php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
