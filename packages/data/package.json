@@ -1,13 +1,13 @@
 {
   "name": "@george/data",
-  "version": "1.0.51",
+  "version": "1.0.52-456ac8f1cbfcf4545bbc0f0777484f7b5600f381.0",
   "description": "TODO:",
   "author": "Tom Gardham-Pallister <tom@threemammals.com>",
   "homepage": "",
   "license": "ISC",
   "main": "src/data.js",
   "devDependencies": {
-    "@george/scripts": "^1.0.43"
+    "@george/scripts": "^1.0.44-456ac8f1cbfcf4545bbc0f0777484f7b5600f381.0"
   },
   "directories": {
     "src": "src",

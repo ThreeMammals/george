@@ -1,6 +1,6 @@
 {
   "name": "@george/render",
-  "version": "1.0.82",
+  "version": "1.0.83-456ac8f1cbfcf4545bbc0f0777484f7b5600f381.0",
   "description": "TODO:",
   "author": "Tom Gardham-Pallister <tom@threemammals.com>",
   "homepage": "",
@@ -27,8 +27,8 @@
     "publish": "./node_modules/@george/scripts/publish.sh"
   },
   "dependencies": {
-    "@george/components": "^1.0.50",
-    "@george/scripts": "^1.0.43",
+    "@george/components": "^1.0.51-456ac8f1cbfcf4545bbc0f0777484f7b5600f381.0",
+    "@george/scripts": "^1.0.44-456ac8f1cbfcf4545bbc0f0777484f7b5600f381.0",
     "@reach/router": "^1.2.1",
     "amqplib": "^0.5.3",
     "apollo-cache-inmemory": "^1.6.2",
