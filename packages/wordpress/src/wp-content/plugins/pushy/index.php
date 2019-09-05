@@ -15,7 +15,6 @@ final class Pushy
     protected $eventHandlers;
     protected $data_access;
     protected $publisher;
-    protected $queue;
 
     public function __construct()
     {
@@ -23,17 +22,13 @@ final class Pushy
         $config = $this->getConfig();
         $this->publisher = $publisherFactory->get($config);
         $this->data_access = new \Pushy\WPDataAccess();
-        $this->eventHandlers = new \Pushy\PublishingEventHandlers($this->publisher, $this->data_access);
-        $this->queue = new \Pushy\QueuingEventHandlers($this->eventHandlers);
+        $this->eventHandlers = new \Pushy\EventHandlers($this->publisher, $this->data_access);
     }
 
     public function run()
     {
-        // run the shutdown hooks
-        add_action('shutdown', array($this, 'shutdown'));
-
         // This hook runs on every post save, update, trash etc
-        add_action('save_post', array($this, 'postUpdated'), 100, 3);
+        add_action('save_post', array($this, 'postUpdated'), 10, 3);
 
         // This hook runs when a post is restored
         add_action('untrash_post', array($this, 'postRestored'), 10);
@@ -116,85 +111,80 @@ final class Pushy
         return $config;
     }
 
-    public function shutdown()
-    {
-        $this->queue->shutdown();
-    }
-
     public function postUpdated($post_id, $post, $update)
     {
-        $this->queue->postUpdated($post_id, $post, $update);
+        $this->eventHandlers->postUpdated($post_id, $post, $update);
     }
 
     public function postTrashed($post_id)
     {
-        $this->queue->postTrashed($post_id);
+        $this->eventHandlers->postTrashed($post_id);
     }
 
     public function postRestored($post_id)
     {
-        $this->queue->postRestored($post_id);
+        $this->eventHandlers->postRestored($post_id);
     }
 
     public function postDeleted($post_id)
     {
-        $this->queue->postDeleted($post_id);
+        $this->eventHandlers->postDeleted($post_id);
     }
 
     public function categoriesUpdated($category_id)
     {
-        $this->queue->categoriesUpdated($category_id);
+        $this->eventHandlers->categoriesUpdated($category_id);
     }
 
     public function tagsUpdated($tag_id)
     {
-        $this->queue->tagsUpdated($tag_id);
+        $this->eventHandlers->tagsUpdated($tag_id);
     }
 
     public function menuUpdated($menu_id)
     {
-        $this->queue->menuUpdated($menu_id);
+        $this->eventHandlers->menuUpdated($menu_id);
     }
 
     public function menuDeleted($menu_id)
     {
-        $this->queue->menuDeleted($menu_id);
+        $this->eventHandlers->menuDeleted($menu_id);
     }
 
     public function mediaUploaded($id)
     {
-        $this->queue->mediaUploaded($id);
+        $this->eventHandlers->mediaUploaded($id);
         return $id;
     }
 
     public function attachmentUploaded($id)
     {
-        $this->queue->attachmentUploaded($id);
+        $this->eventHandlers->attachmentUploaded($id);
     }
 
     public function attachmentDeleted($id)
     {
-        $this->queue->attachmentDeleted($id);
+        $this->eventHandlers->attachmentDeleted($id);
     }
 
     public function attachmentUpdated($id)
     {
-        $this->queue->attachmentUpdated($id);
+        $this->eventHandlers->attachmentUpdated($id);
     }
 
     public function pagePublished($id)
     {
-        $this->queue->pagePublished($id);
+        $this->eventHandlers->pagePublished($id);
     }
 
     public function postMetaUpdated($id, $object_id, $meta_key, $meta_value)
     {
-        $this->queue->postMetaUpdated($id, $object_id, $meta_key, $meta_value);
+        $this->eventHandlers->postMetaUpdated($id, $object_id, $meta_key, $meta_value);
     }
 
     public function optionUpdated($option_name, $old_value, $value)
     {
-        $this->queue->optionUpdated($option_name, $old_value, $value);
+        $this->eventHandlers->optionUpdated($option_name, $old_value, $value);
     }
 }
 
