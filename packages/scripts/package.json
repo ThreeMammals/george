@@ -1,6 +1,6 @@
 {
   "name": "@george/scripts",
-  "version": "1.0.42",
+  "version": "1.0.49-acdfe0ce83d2dfd3ca12cfe121a230bcec7501b3.0",
   "description": "TODO:",
   "main": "index.js",
   "scripts": {

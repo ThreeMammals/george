@@ -8,7 +8,6 @@ git config --global user.name "Tom Pallister"
 
 # Get the packages that have changed
 changed_packages=$(echo "{$(lerna changed --json --loglevel=silent | jq -c -r 'map(.name) | join(",")'),}")
-
 echo "changed_packages=${changed_packages}"
 
 if [ ${changed_packages} = "{,}" ] || [ ${changed_packages} = "{}" ] || [ ${changed_packages} = {} ]
@@ -34,5 +33,5 @@ docker run --rm \
     -e GEORGE_ACR_URL=${GEORGE_ACR_URL} \
     -e GEORGE_ACR_USERNAME=${GEORGE_ACR_USERNAME} \
     -e GEORGE_ACR_PASSWORD=${GEORGE_ACR_PASSWORD} \
-    mijitt0m/build \
+    mijitt0m/build:1.0.2  \
     ./packages/scripts/build-pr.sh ${changed_packages}
