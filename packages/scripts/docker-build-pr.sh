@@ -7,8 +7,7 @@ git config --global user.email "tom@threemammals.com"
 git config --global user.name "Tom Pallister"
 
 # Get the packages that have changed
-# changed_packages=$(echo "{$(lerna changed --json --loglevel=silent | jq -c -r 'map(.name) | join(",")'),}")
-changed_packages={@george/wordpress,}
+changed_packages=$(echo "{$(lerna changed --json --loglevel=silent | jq -c -r 'map(.name) | join(",")'),}")
 echo "changed_packages=${changed_packages}"
 
 if [ ${changed_packages} = "{,}" ] || [ ${changed_packages} = "{}" ] || [ ${changed_packages} = {} ]
