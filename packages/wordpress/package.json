@@ -22,7 +22,7 @@
     "install-pushy": "./scripts/install-pushy.sh",
     "upgrade-pushy": "./scripts/upgrade-pushy.sh",
     "uninstall-pushy": "./scripts/uninstall-pushy.sh",
-    "build": "npm run install-pushy && ./node_modules/@george/scripts/setup-npmrc.sh && docker build --no-cache -t george/wordpress . && ./node_modules/@george/scripts/teardown-npmrc.sh",
+    "build": "npm run install-wordpress-seo && npm run install-pushy && ./node_modules/@george/scripts/setup-npmrc.sh && docker build --no-cache -t george/wordpress . && ./node_modules/@george/scripts/teardown-npmrc.sh",
     "build-ci": "npm run build",
     "publish": "./node_modules/@george/scripts/publish.sh"
   }
