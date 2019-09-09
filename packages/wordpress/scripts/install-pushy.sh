@@ -8,3 +8,5 @@ cd src/wp-content/plugins/pushy
 echo "Installing Pushy Dependencies"
 
 composer install
+
+cd ../../../../

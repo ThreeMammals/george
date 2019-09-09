@@ -19,7 +19,7 @@ else
     grunt build
 fi
 
-cd ../../../
+cd ../../../../
 
 echo "Finished installing Yoast"
 
