@@ -124,7 +124,7 @@ services:
     volumes:
        - render_static_content:/usr/share/nginx/html
        - render_wp_images:/usr/share/nginx/html/wp-content/
-      #  - wordpress_data:/var/www/html
+       - wordpress_data:/var/www/html
       #  this is the images uploaded to wordpress that are saved locally
        - ./packages/wordpress/src/wp-content/uploads:/var/www/html/wp-content/uploads
        - ./packages/serve/certs:/etc/letsencrypt
