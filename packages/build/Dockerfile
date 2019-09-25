@@ -55,3 +55,5 @@ RUN apt-get update && \
     apt -y install \
     php-xml \ 
     php7.3-mbstring 
+
+RUN npm install -g grunt-cli 
