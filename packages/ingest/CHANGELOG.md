@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.70](https://github.com/ThreeMammals/george/compare/@george/ingest@1.0.69...@george/ingest@1.0.70) (2019-09-25)
+
+**Note:** Version bump only for package @george/ingest
+
+
+
+
+
 ## [1.0.69](https://github.com/ThreeMammals/george/compare/@george/ingest@1.0.68...@george/ingest@1.0.69) (2019-09-25)
 
 **Note:** Version bump only for package @george/ingest

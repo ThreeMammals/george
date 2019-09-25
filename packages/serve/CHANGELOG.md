@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.66](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.65...@george/serve@1.0.66) (2019-09-25)
+
+**Note:** Version bump only for package @george/serve
+
+
+
+
+
 ## [1.0.65](https://github.com/ThreeMammals/george/compare/@george/serve@1.0.64...@george/serve@1.0.65) (2019-09-25)
 
 **Note:** Version bump only for package @george/serve
