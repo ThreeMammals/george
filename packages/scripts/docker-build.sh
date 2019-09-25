@@ -1,6 +1,7 @@
 #!/bin/sh
 
 npm install
+lerna bootstrap
 
 # lerna needs these 
 git config --global user.email "tom@threemammals.com"

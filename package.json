@@ -2,8 +2,8 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "build": "./packages/scripts/docker-build.sh",
-    "build-pr": "./packages/scripts/docker-build-pr.sh",
+    "build": "./packages/scripts/setup-npmrc.sh && ./packages/scripts/docker-build.sh && ./packages/scripts/teardown-npmrc.sh",
+    "build-pr": "./packages/scripts/setup-npmrc.sh && ./packages/scripts/docker-build-pr.sh && ./packages/scripts/teardown-npmrc.sh",
     "gatsby": "gatsby",
     "lerna": "lerna run",
     "bootstrap": "lerna bootstrap",
