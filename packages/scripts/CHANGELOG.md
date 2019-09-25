@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.51](https://github.com/ThreeMammals/george/compare/@george/scripts@1.0.50...@george/scripts@1.0.51) (2019-09-25)
+
+**Note:** Version bump only for package @george/scripts
+
+
+
+
+
 ## [1.0.50](https://github.com/ThreeMammals/george/compare/@george/scripts@1.0.49-acdfe0ce83d2dfd3ca12cfe121a230bcec7501b3.1...@george/scripts@1.0.50) (2019-09-05)
 
 **Note:** Version bump only for package @george/scripts
