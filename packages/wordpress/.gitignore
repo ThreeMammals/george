@@ -16,6 +16,8 @@ src/wp-content/uploads
 node_modules/
 node_modules
 
+composer.lock
+
 /.htaccess
 /license.txt
 /readme.html
