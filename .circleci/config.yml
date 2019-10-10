@@ -1,7 +1,7 @@
 version: 2.1
 executors:
   base:
-    machine
+    - machine
 jobs:
   build:
     executor: base
