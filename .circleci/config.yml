@@ -2,7 +2,7 @@ version: 2.1
 executors:
   base:
     machine:
-      docker_layer_caching: true
+      docker_layer_caching: false
 jobs:
   build:
     executor: base
